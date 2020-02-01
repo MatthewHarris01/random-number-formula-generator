@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- JQUERY LINK-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- LOCAL CODE LINK -- MUST BE IN SAME FOLDER AS THIS HTML PAGE. -->
+  <script SRC = "./rnd.js"></script>
+
+
+  <title>Random Number Formula Generator</title>
+</head>
+<body>
+  <h1>Random Number Formula Generator</h1>
+  <p>This page shows the forumula to use to get a range of random numbers based on a range you specify. Note that the formula displayed will create random numbers in the range you specified, inclusive of the end points.</p>
+  <p>The formula for computing random numbers is well-known and readily found on the internet with a simple search, but things get a little complicated if you want to create a range of random numbers tht does not begin with 0 or 1. For example, the standard formula found on the internet does not work very well if you want to produce, for example, a range of random number from 5 to 50. This tool will is able to adjust the standard formula to compute such ranges of random numbers, and will display the formula you need in your code to, for example, create a random numbers in a range from 50 to 100.</p>
+
+
+    <form id="input-form" style="background-color:lightgray;padding:20px;border:3px solid black;">
+      <p id="feedback" style="color:red;font-weight:bold;background-color:yellow;text-align:center;padding:0px;"></p> <!--error messages and other feedback to user goes here-->
+
+      <p>Enter the values for the inclusive range of random numbers you want to create. For example, if you want to create a range of random numbers from 1 to 6, inclusive, enter "1" as the low end of the range, and enter "6" as the high end of the range. If you want to create a range of random numbers from 0 to 60, enter 0 as the low end of the range, and enter 60 as the high end of the range. </p>
+      <label for="min-input" style="color: black;font-weight:bold;">Enter the minimum  of the number range you want (0 or 1, usually ) then click the button below to display the formula for random number creation:</label>
+      <input type="text" id="min-input"><br>
+
+
+      <label for="max-input" style="color:black;font-weight:bold;">Enter the maximum end of the random number range you want, then click the button below to display the formula for the random number creation:</label>
+      <input type="text" id="max-input"><br>
+
+      
+
+      <!-- Button activates the api call to make lat/long conversion -->
+      <input id="range-input" type="submit" style="font-weight:bold; background-color:goldenrod;" value="Click to display the JavaScript formula to create random numbers in the range you specified">
+  
+  
+    </form>
+    <p id="output"></p>
+    <p id="formula" style="font-weight:bold;background-color:lightgreen;text-align:center;border:1px solid green;padding:0px;"></p>
+
+</body>
+</html>
